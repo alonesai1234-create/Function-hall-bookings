@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Function Halls | Royal Leaf</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="halls">
+  <header class="navbar">
+    <a class="brand" href="index.html">Royal Leaf <span>Function Halls</span></a>
+    <nav><a href="index.html">Home</a><a class="active" href="halls.html">Function Halls</a><a href="food.html">Food</a><a href="booking.html">Booking</a></nav>
+    <a class="cart-pill" href="booking.html">🛒 <span id="navCartCount">0</span></a>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-header"><p class="eyebrow">STEP 1</p><h1>Select your function hall</h1><p>Pick a package. You can change your selection anytime before final confirmation.</p></section>
+    <div class="filter-row">
+      <button class="filter-btn active" data-hall-filter="all">All</button>
+      <button class="filter-btn" data-hall-filter="plain">Plain</button>
+      <button class="filter-btn" data-hall-filter="chairs">With Chairs</button>
+      <button class="filter-btn" data-hall-filter="decor">Chairs + Decoration</button>
+    </div>
+    <section id="hallGrid" class="card-grid hall-grid"></section>
+  </main>
+
+  <footer><p>Choose one hall package before building your menu.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>

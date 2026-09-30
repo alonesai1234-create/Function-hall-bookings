@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Menu | Royal Leaf</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="food">
+  <header class="navbar">
+    <a class="brand" href="index.html">Royal Leaf <span>Function Halls</span></a>
+    <nav><a href="index.html">Home</a><a href="halls.html">Function Halls</a><a class="active" href="food.html">Food</a><a href="booking.html">Booking</a></nav>
+    <a class="cart-pill" href="booking.html">🛒 <span id="navCartCount">0</span></a>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-header"><p class="eyebrow">STEP 2</p><h1>Build your food menu</h1><p>Add items from both sections. Every item has a quantity animation when you add or remove it.</p></section>
+    <div class="menu-toolbar">
+      <div class="filter-row"><button class="filter-btn food-filter active" data-food-filter="veg">🥦 Veg — 22 items</button><button class="filter-btn food-filter" data-food-filter="nonveg">🍗 Non-Veg — 22 items</button></div>
+      <a class="btn btn-primary" href="booking.html">Go to Booking <span class="cart-count-inline" id="toolbarCartCount">0</span></a>
+    </div>
+    <div id="foodGrid" class="card-grid food-grid"></div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <footer><p>Tip: select a hall first, then add food items. Your cart is saved in browser localStorage.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>

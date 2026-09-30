@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking & Payment | Royal Leaf</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="booking">
+  <header class="navbar">
+    <a class="brand" href="index.html">Royal Leaf <span>Function Halls</span></a>
+    <nav><a href="index.html">Home</a><a href="halls.html">Function Halls</a><a href="food.html">Food</a><a class="active" href="booking.html">Booking</a></nav>
+    <a class="cart-pill" href="booking.html">🛒 <span id="navCartCount">0</span></a>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-header"><p class="eyebrow">STEP 3 & 4</p><h1>Review, pay and confirm</h1><p>Enter customer details, select your payment method, and press Confirm Booking.</p></section>
+
+    <div class="booking-layout">
+      <section class="panel">
+        <div class="panel-title"><h2>Your selection</h2><button class="small-btn" id="clearCartBtn">Clear food</button></div>
+        <div id="selectedHall" class="selected-hall"></div>
+        <div id="cartList" class="cart-list"></div>
+        <div id="emptyCartMessage" class="empty-state hidden">No food items yet. <a href="food.html">Add food →</a></div>
+      </section>
+
+      <section class="panel">
+        <h2>Customer details</h2>
+        <form id="bookingForm" class="form-grid">
+          <label>Full name<input id="customerName" name="customerName" required placeholder="e.g. Sai Kumar" /></label>
+          <label>Phone number<input id="phone" name="phone" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number" /></label>
+          <label>Function date<input id="eventDate" name="eventDate" type="date" required /></label>
+          <label>Event type<select id="eventType" name="eventType"><option>Wedding</option><option>Birthday</option><option>Engagement</option><option>Reception</option><option>Corporate Event</option><option>Other</option></select></label>
+          <label class="full-width">Special notes<textarea id="notes" name="notes" rows="3" placeholder="Decoration theme, stage preference, etc."></textarea></label>
+
+          <div class="payment-box full-width">
+            <h3>Payment option</h3>
+            <div class="payment-options">
+              <label class="pay-option"><input type="radio" name="paymentMethod" value="UPI" checked /><span>📱 UPI</span><small>Demo checkout</small></label>
+              <label class="pay-option"><input type="radio" name="paymentMethod" value="CARD" /><span>💳 Card</span><small>Demo checkout</small></label>
+              <label class="pay-option"><input type="radio" name="paymentMethod" value="CASH" /><span>💵 Cash</span><small>Pay at venue</small></label>
+            </div>
+          </div>
+
+          <div class="price-summary full-width">
+            <div><span>Hall</span><strong id="hallTotal">₹0</strong></div>
+            <div><span>Food</span><strong id="foodTotal">₹0</strong></div>
+            <div class="grand"><span>Total</span><strong id="grandTotal">₹0</strong></div>
+          </div>
+          <button class="btn btn-primary confirm-btn full-width" type="submit" id="confirmBtn">Confirm Booking 🎉</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <footer><p>Demo payment only — do not enter real card details.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
